@@ -1,18 +1,223 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <title>我的 GitHub 主页</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tianaoli 的 GitHub 主页</title>
+  <style>
+    :root {
+      --primary-color: #2da44e;
+      --bg-color: #f6f8fa;
+      --text-main: #24292f;
+      --text-muted: #57606a;
+      --card-bg: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* 头部个人简介卡片 */
+    .profile-header {
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      margin-bottom: 30px;
+    }
+
+    .avatar-placeholder {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-color: #e1e4e8;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border: 4px solid white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .avatar-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .bio {
+      color: var(--text-muted);
+      font-size: 1.1em;
+      margin-bottom: 20px;
+    }
+
+    /* 技能与标签 */
+    .tags {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      background-color: #ddf4ff;
+      color: #0969da;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.9em;
+      font-weight: 500;
+    }
+
+    /* 模块标题 */
+    h2 {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #e1e4e8;
+    }
+
+    /* 项目展示网格 */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1px));
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .project-card {
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: 1px solid #e1e4e8;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-img-placeholder {
+      width: 100%;
+      height: 150px;
+      background-color: #f0f2f6;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      overflow: hidden;
+    }
+
+    .project-img-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .project-title {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #0969da;
+      text-decoration: none;
+    }
+
+    .project-desc {
+      color: var(--text-muted);
+      font-size: 0.95em;
+    }
+
+    /* 底部链接 */
+    .footer-links {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+    }
+
+    .footer-links a:hover {
+      color: #0969da;
+    }
+  </style>
 </head>
 <body>
-  <h1>你好，我是 XXX</h1>
-  <p>欢迎来到我的 GitHub 主页 🎉</p>
-  <p>这里可以放：</p>
-  <ul>
-    <li>个人简介</li>
-    <li>项目展示</li>
-    <li>博客链接</li>
-  </ul>
+
+  <div class="container">
+    
+    <header class="profile-header">
+      <div class="avatar-placeholder">
+        <img src="https://via.placeholder.com/120" alt="Avatar">
+      </div>
+      <h1>你好，我是 tianaoli 👋</h1>
+      <p class="bio">欢迎来到我的主页！我专注于多模态大模型、操作系统底层原理以及高效算法的探索与开发。</p>
+      
+      <div class="tags">
+        <span class="tag">Vision-Language Models</span>
+        <span class="tag">C++ / Python</span>
+        <span class="tag">Operating Systems (xv6)</span>
+        <span class="tag">Algorithms</span>
+      </div>
+    </header>
+
+    <main>
+      <h2>✨ 精选项目 (Pinned Projects)</h2>
+      <div class="projects-grid">
+        
+        <article class="project-card">
+          <div class="project-img-placeholder">
+            <img src="https://via.placeholder.com/300x150" alt="Project 1 Cover">
+          </div>
+          <a href="#" class="project-title">LVLM 视频理解 Benchmark</a>
+          <p class="project-desc">针对第一人称视频理解与安全场景的大型视觉语言模型基准测试系统设计与实现。</p>
+        </article>
+
+        <article class="project-card">
+          <div class="project-img-placeholder">
+            <img src="https://via.placeholder.com/300x150" alt="Project 2 Cover">
+          </div>
+          <a href="#" class="project-title">MIT 6.S081 操作系统实验</a>
+          <p class="project-desc">基于 xv6 内核的操作系统核心组件开发，包含进程调度、内存管理及文件系统优化。</p>
+        </article>
+
+      </div>
+    </main>
+
+    <footer class="footer-links">
+      <a href="#">✉️ 联系邮箱tianaoli777@gmail.com</a>
+    </footer>
+
+  </div>
+
 </body>
 </html>
 
