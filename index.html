@@ -42,9 +42,10 @@
       margin-bottom: 30px;
     }
 
+    /* 个人照片/头像样式 */
     .avatar-placeholder {
-      width: 120px;
-      height: 120px;
+      width: 140px; /* 稍微放大了一点，更适合放真实照片 */
+      height: 140px;
       border-radius: 50%;
       background-color: #e1e4e8;
       margin: 0 auto 20px;
@@ -53,13 +54,13 @@
       justify-content: center;
       overflow: hidden;
       border: 4px solid white;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
     .avatar-placeholder img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: cover; /* 保证照片不变形 */
     }
 
     h1 {
@@ -71,6 +72,9 @@
       color: var(--text-muted);
       font-size: 1.1em;
       margin-bottom: 20px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     /* Skills & Tags */
@@ -145,6 +149,7 @@
       margin-bottom: 10px;
       color: #0969da;
       text-decoration: none;
+      display: inline-block;
     }
 
     .project-desc {
@@ -163,6 +168,7 @@
       text-decoration: none;
       margin: 0 15px;
       font-weight: 500;
+      transition: color 0.2s;
     }
 
     .footer-links a:hover {
@@ -176,13 +182,13 @@
     
     <header class="profile-header">
       <div class="avatar-placeholder">
-        <img src="https://via.placeholder.com/120" alt="Avatar">
+        <img src="https://via.placeholder.com/140" alt="Personal Photo">
       </div>
+      
       <h1>Hi, I'm tianaoli 👋</h1>
-      <p class="bio">Welcome to my profile! 
-        I'm now an undergraduated student at Future Tech, South China Univerisity of Technology. 
-        I'm intersted in Large Vision-Language Models, 
-        low-level operating system principles, and exploring design of machine learning systems.</p>
+      <p class="bio">
+        Welcome to my profile! I am currently an undergraduate student at the School of Future Technology, South China University of Technology. My interests lie in Large Vision-Language Models (LVLMs), low-level operating system principles, and exploring the design of machine learning systems.
+      </p>
       
       <div class="tags">
         <span class="tag">Machine Learning Systems</span>
@@ -194,11 +200,10 @@
     <main>
       <h2>✨ Pinned Projects</h2>
       <div class="projects-grid">
-        
 
         <article class="project-card">
           <div class="project-img-placeholder">
-            <img src="https://via.placeholder.com/300x150" alt="Project 2 Cover">
+            <img src="https://via.placeholder.com/300x150" alt="OS Project Cover">
           </div>
           <a href="#" class="project-title">MIT 6.S081 Operating System Labs</a>
           <p class="project-desc">Development of core operating system components based on the xv6 kernel, including process scheduling, memory management, and file system optimization.</p>
@@ -209,7 +214,7 @@
 
     <footer class="footer-links">
       <a href="#">📝 My Blog</a>
-      <a href="#">✉️ Contact Me  tianaoli777@gmail.com</a>
+      <a href="mailto:tianaoli777@gmail.com">✉️ tianaoli777@gmail.com</a>
       <a href="#">🎓 Resume</a>
     </footer>
 
